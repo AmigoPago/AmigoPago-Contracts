@@ -20,6 +20,6 @@ This contract will manage the USDC-backed credit system, with functions for:
 - Calculating credit limits based on collateral value
 - Managing loan repayments and releasing collateral
 
-USDC MOCKUP CONTRACT: --CC2GOBGNJQBNX7QY2WPIFF7QAYPHY56UDVDDEHY3EQ6YAJPQVW2U77Z4--
+* USDC MOCKUP CONTRACT: --CC2GOBGNJQBNX7QY2WPIFF7QAYPHY56UDVDDEHY3EQ6YAJPQVW2U77Z4--
 
 These smart contracts will interact with each other and the broader AmigoPago system to ensure secure, transparent, and efficient operations on the Stellar blockchain. They will be thoroughly tested and audited to ensure security and compliance with relevant regulations.
