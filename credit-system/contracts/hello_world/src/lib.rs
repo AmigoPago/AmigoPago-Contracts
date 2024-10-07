@@ -1,6 +1,5 @@
 #![no_std]
-use soroban_sdk::{contract, contractimpl, contracttype, vec, Address, BytesN, Env, IntoVal, Vec, log, symbol_short, Symbol, map};
-
+use soroban_sdk::{contract, contractimpl, Address, Env, IntoVal};
 
 
 mod usdc_contract 
@@ -10,7 +9,7 @@ mod usdc_contract
 
 mod AMI_contract 
 {
-    soroban_sdk::contractimport!(file = "../../../AMI_token/target/wasm32-unknown-unknown/release/wrapped_lumen_mockup.wasm");
+    soroban_sdk::contractimport!(file = "../../../AMI_token/target/wasm32-unknown-unknown/release/ami_token.wasm");
 }
 
 

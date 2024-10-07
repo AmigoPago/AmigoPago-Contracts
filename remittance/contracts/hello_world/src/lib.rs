@@ -1,5 +1,6 @@
 #![no_std]
-use soroban_sdk::{contract, contractimpl, contracttype, vec, Address, BytesN, Env, IntoVal, Vec, log, symbol_short, Symbol, map};
+// use soroban_sdk::{contract, contractimpl, contracttype, vec, Address, BytesN, Env, IntoVal, Vec, log, symbol_short, Symbol, map};
+use soroban_sdk::{contract, contractimpl, Address, Env};
 
 
 
@@ -10,7 +11,7 @@ mod usdc_contract
 
 mod AMI_contract 
 {
-    soroban_sdk::contractimport!(file = "../../../AMI_token/target/wasm32-unknown-unknown/release/wrapped_lumen_mockup.wasm");
+    soroban_sdk::contractimport!(file = "../../../AMI_token/target/wasm32-unknown-unknown/release/ami_token.wasm");
 }
 
 
@@ -29,10 +30,6 @@ impl Remittance
         let units: u32 = usd_to_send / 100;
         let fee: u32 = units * 4;
         let amount_to_send: u32 = usd_to_send - fee;
-     
-        env.storage()
-            .persistent()
-            .set(&DataKey::PaymentsWithInterests(caller.clone()), &paymentWithInterest.clone());
 
         let actual_contract_address = env.current_contract_address();
 
